@@ -1,0 +1,161 @@
+##from tkinter import *
+##win = Tk()
+##canvas = Canvas(win,bg = "white",width = 300,height = 300)
+##canvas.pack()
+##win.mainloop()
+##from tkinter import *
+##win = Tk()
+##canvas = Canvas(win,bg = "yellow",width = 100,height = 100)
+##canvas.pack()
+##win.mainloop()
+##from tkinter import *
+##
+##win = Tk()
+##canvas = Canvas(win,bg = "white",width = 500,height = 100)
+##canvas.create_line(0,50,500,50,fill = "blue",width  =  5)
+##canvas.pack()
+##win.mainloop()
+##from tkinter import *
+##
+##win = Tk()
+##canvas = Canvas(win,bg = "white",width = 500,height = 100)
+##canvas.create_line(100,50,400,50,fill = "Green",width  =  5)
+##canvas.pack()
+##win.mainloop()
+##from tkinter import *
+##
+##win = Tk()
+##canvas = Canvas(win,bg = "white",width = 500,height = 500)
+##canvas.create_line(250,100,250,400,fill = "blue",width  =  5)
+##canvas.pack()
+##win.mainloop()
+##from tkinter import *
+##
+##win = Tk()
+##canvas = Canvas(win,bg = "white",width = 500,height = 100)
+##canvas.pack()
+##
+##x1, y1 = 0, 0
+##x2, y2 = 500, 0
+##
+##for i in range(3) :
+##    y1 += 30
+##    y2  = y1
+##    canvas.create_line(x1,y1,x2,y2,fill = "red",width = 3)
+##
+##win.mainloop()
+##from tkinter import *
+##
+##win = Tk()
+##canvas = Canvas(win,bg = "white",width = 500,height = 500)
+##canvas.pack()
+##
+##x1, y1 = 10, 10
+##x2, y2 = 10, 460
+##x3,y3 = 10,10
+##x4,y4 = 460,10
+##
+##for i in range(10) :
+##    canvas.create_line(x1,y1,x2,y2,fill = "red",width = 3)
+##    canvas.create_line(x3,y3,x4,y4,fill = "blue",width = 3)
+##    x1 += 50
+##    x2  = x1
+##    y3 += 50
+##    y4  = y3
+##
+##
+##win.mainloop()
+##from tkinter import *
+##def paint(event) :
+##    x1,y1 = event.x, event.y
+##    x2,y2 = x1 + 5,y1 + 5
+##    canvas.create_line(x1, y1, x2, y2, width = 3)
+##
+##win = Tk()
+##canvas = Canvas(win, bg = "white" , width = 500,height = 200)
+##canvas.pack()
+##
+##win.bind("<B1-Motion>" , paint)
+##
+##win.mainloop()
+
+
+##from tkinter import *
+##
+##pen_color = "black"
+##
+##def paint(event) :
+##    global pen_color
+##    x1,y1 = event.x, event.y
+##    x2,y2 = x1 + 5,y1 + 5
+##    canvas.create_line(x1, y1, x2, y2, width = 3,fill = pen_color)
+##
+##def change_color() :
+##    global pen_color
+##    pen_color = "red"
+##    
+##win = Tk()
+##canvas = Canvas(win, bg = "white" , width = 500,height = 200)
+##btn = Button(win,text = "red",command = change_color)
+##
+##canvas.pack()
+##btn.pack()
+##
+##win.bind("<B1-Motion>" , paint)
+##
+##win.mainloop()
+
+from tkinter import *
+
+pen_color = "black"
+
+def paint(event) :
+    global pen_color
+    x1,y1 = event.x, event.y
+    x2,y2 = x1 + 5,y1 + 5
+    canvas.create_line(x1, y1, x2, y2, width = 3,fill = pen_color)
+
+def change_color() :
+    global pen_color
+    pen_color = "red"
+    
+win = Tk()
+canvas = Canvas(win, bg = "white" , width = 500,height = 200)
+btn = Button(win,bg = "white",text = "white",command = change_color)
+btn1 = Button(win,bg = "black",fg = "white",text = "black",command = change_color)
+btn2= Button(win,bg = "blue",fg = "white",text = "blue",command = change_color)
+btn3 = Button(win,bg = "green",fg = "white",text = "green",command = change_color)
+btn4 = Button(win,bg = "yellow",text = "yellow",command = change_color)
+btn5 = Button(win,bg = "red",text = "red",fg = "white",command = change_color)
+btn6 = Button(win,bg = "white",text = "+",command = change_color)
+btn7 = Button(win,bg = "white",text = "_",command = change_color)
+btn8 = Button(win,bg = "white",text = "clear",command = change_color)
+canvas.pack()
+btn.pack()
+btn1.pack()
+btn2.pack()
+btn3.pack()
+btn4.pack()
+btn5.pack()
+btn6.pack()
+btn7.pack()
+btn8.pack()
+
+win.bind("<B1-Motion>" , paint)
+
+win.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
